@@ -167,4 +167,5 @@ let tirarDatos = function(datos){
     return datos[Math.floor(Math.random()* datos.length)];
 }
 const dado=[1,2,3,4,5,6];
-console.log (dado);
+let resultadoDado = tirarDatos(dado);
+console.log(resultadoDado);
