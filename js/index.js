@@ -67,18 +67,27 @@
 //    console.log("EQUIVOCADO");
 //}
 
-//let imagenAvatar="https://www.google.com/imgres?q=avatar%20imagenes%20cartelera%20cine&imgurl=https%3A%2F%2Flumiere-a.akamaihd.net%2Fv1%2Fimages%2Fe9fa83c7242fb46fa962150a60301d4e_2764x4096_7a402a9f.jpeg%3Fregion%3D0%2C0%2C2764%2C4096&imgrefurl=https%3A%2F%2Fwww.20thcenturystudiosla.com%2Fnovedades%2Favatar-regresa-a-los-cines-poster-y-fecha-de-re-estreno&docid=lou3XhmOUVloAM&tbnid=djiNNxRgyzAlXM&vet=12ahUKEwjG4sjvvPeSAxWdu5UCHUgSAocQnPAOegQIGhAB..i&w=2764&h=4096&hcb=2&ved=2ahUKEwjG4sjvvPeSAxWdu5UCHUgSAocQnPAOegQIGhAB";
-//let imagenCumbres="";
-//let peliculaElegida=prompt("Ingrese su pelicula favorita: \ -Avatar \-Cumbres Borrascosas");
+//const imagenAvatar = document.createElement(`img`);
+//imagenAvatar.src='assets/img/avatar.jpeg';
+//imagenAvatar.style.width=`30%`;
 
+//const imagenCumbres =document.createElement(`img`);
+//imagenCumbres.src=`assets/img/cumbresBorrascosas.png`;
+//imagenCumbres.style.width=`50%`;
+
+//let peliculaElegida=prompt("Ingrese su pelicula favorita: Avatar / Cumbres Borrascosas");
 //switch (peliculaElegida){
 //    case "Avatar":
-//        document.write(`Su ticket a sido emitido ${peliculaElegida}`);
-//        break;
-//    case "Cumbres Borrascosas":
-//        document.write(`Su ticket a sido emitido ${peliculaElegida}`);
-//        break;
+//     document.write(`Su ticket a sido emitido ${peliculaElegida}`);
+//     document.body.appendChild(imagenAvatar);
+//     break;
+// case "Cumbres Borrascosas":
+//     document.write(`Su ticket a sido emitido ${peliculaElegida}`);
+//     document.body.appendChild(imagenCumbres);
+//     break;
 //}
+
+//ARRAY
 
 //ensaladaDeFrutas=["Naranja","Banana","Manzana","Frutilla","Cereza"];
 //for(let i=0; i<=4; i++){
@@ -86,86 +95,88 @@
 //}
 
 //edades=[12,34,57,98,2,30];
-
+//let edadesTotales=0;
+//let promedio=0;
 //for(let i=0; i<=5; i++){
-//    let edadesTotales= edades[i];
+//    edadesTotales += edades[i];
 //    let num= Number;
 //    let promedio;
 //    console.log(edades[i]);
-    
-//    if(i!=5){
-//        edadesTotales += edades[i];
-//        num  += edadesTotales;
-//    }
-//    else{
-//        console.log(num);
+//    if(i==edades.length-1){
 //        promedio = edadesTotales / edades.length;
+//        promedio=Math.round(promedio);
 //        console.log(`El promedio de las 6 edades son: ${promedio}`);
 //    }
 //}
 
 //const amigo=["Ryan", "Kieran", "Mark", "Miguel"];
 //console.log(amigo);
-//for(let i=0; i<4; i++){
-//    let temp= amigo[i];
-//    if(temp.length >4){
-//        if (i<3){
-//            amigo.splice(i);
+//for(let i=amigo.length-1; i>=0; i--){
+//    if(amigo[i].length!==4){
+//        if (i<amigo.length-1){
+//            amigo.splice(i,1);
 //        }
-//        else if(i===4){
+//        else if(i===amigo.length-1){
 //            amigo.pop(i);
 //        }       
-//        console.log(amigo);
 //    }
 //}
 //console.log(amigo);
 
+//const listaDeSuper=["jabon","pasta","azucar","arroz","tomates"];
+//console.log(listaDeSuper);
+//listaDeSuper.push("shampoo");
+//console.log(listaDeSuper);
+//listaDeSuper.shift();
+//console.log(listaDeSuper.length);
+//listaDeSuper.indexOf("shampoo");
+//console.log(listaDeSuper);
+
 //FUNCIONES
 
-let saludo= function saludo(){
-    console.log("Bienvenido visitante");
-}
-saludo();
+//let saludo= function saludo(){
+//    console.log("Bienvenido visitante");
+//}
+//saludo();
 
-let calculoMayor= function calculoMayor(num1, num2){
-    if(num1>num2){
-        alert(`El mayor numero es num1: ${num1}`);
-    }
-    else if(num1==num2){
-        alert(`Los numeros son iguales`);
-    }
-    else{
-        alert(`El mayor numero es num2: ${num2}`);
-    }
-}
-calculoMayor(25,15);
-calculoMayor(25,35);
-calculoMayor(25,25);
+//let calculoMayor= function calculoMayor(num1, num2){
+//    if(num1>num2){
+//        alert(`El mayor numero es num1: ${num1}`);
+//    }
+ //   else if(num1==num2){
+//        alert(`Los numeros son iguales`);
+//    }
+//    else{
+//        alert(`El mayor numero es num2: ${num2}`);
+//    }
+//}
+//calculoMayor(25,15);
+//calculoMayor(25,35);
+//calculoMayor(25,25);
 
-let filtrarAmigos= function(arr){
-    for (let i=0; i<arr.length;i++){
-        if (arr[i].length>4 || arr[i].length<4){
-            if(i<arr.length-1){
-                arr.splice(i,1);
-            }
-            else if(i==arr.length-1){
-                arr.pop(i);
-            }
-        }
-    }
-    return arr;
-}
+//let filtrarAmigos= function(arr){
+//    for (let i=arr.length-1; i>=0;i--){
+//        if (arr[i].length!==4){
+//            if(i<arr.length-1){
+//                arr.splice(i,1);
+//            }
+//            else if(i==arr.length-1){
+//                arr.pop(i);
+//            }
+//        }
+//    }
+//    return arr;
+//}
+//const amigo1=["Ryan","Kieran","Mark","Miguel"];
+//const amigo2 =["Ringo","Jhon","Paul","George","Ada","Marie"];
+//let a = filtrarAmigos(amigo1);
+//let b = filtrarAmigos(amigo2);
+//console.log(a);
+//console.log(b);
 
-const amigo1=["Ryan","Kieran","Mark","Miguel"];
-const amigo2 =["Ringo","Jhon","Paul","George","Ada","Marie"];
-let a = filtrarAmigos(amigo1);
-let b = filtrarAmigos(amigo2);
-console.log(a);
-console.log(b);
-
-let tirarDatos = function(datos){
-    return datos[Math.floor(Math.random()* datos.length)];
-}
-const dado=[1,2,3,4,5,6];
-let resultadoDado = tirarDatos(dado);
-console.log(resultadoDado);
+//let tirarDatos = function(datos){
+//    return datos[Math.floor(Math.random()* datos.length)];
+//}
+//const dado=[1,2,3,4,5,6];
+//let resultadoDado = tirarDatos(dado);
+//console.log(resultadoDado);
