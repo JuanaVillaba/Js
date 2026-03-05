@@ -180,3 +180,64 @@
 //const dado=[1,2,3,4,5,6];
 //let resultadoDado = tirarDatos(dado);
 //console.log(resultadoDado);
+
+let toDoList = {
+    tipoDeTarea: "Compras",
+    dia: "06/03/2026",
+    productos: ["jabon","aceite","arroz","shampoo"],
+    cantidadDeProductos: 4,
+    estado: "pendiente",
+    notificacion: function(){
+        alert("¡Esta tarea tiene una prioridad urgente!");
+    }
+}
+console.log(toDoList.dia);
+console.log(toDoList["tipoDeTarea"]);
+console.log(toDoList["cantidadDeProductos"]);
+toDoList.notificacion();
+
+const superHeroes ={
+    "squadName" : "Super Hero Squad",
+    "homeTown" : "Metro City",
+    "formed" : 2016,
+    "secretBase" : "Super tower",
+    "active" : true,
+    "members" : [
+        {
+        "name" : "Molecule Man",
+        "age" : 29,
+        "secretIdentity" : "Dan Jukes",
+        "powers" : ["Radiation resistance","Turning tiny","Radiation blast"]
+        },
+        {
+        "name" : "Madame Uppercut",
+        "age" : 39,
+        "secretIdentity" : "Jane Wilson",
+        "powers" : ["Million tonne punch","Damage resistance","Superhuman reflexes"]
+        }
+    ]
+}
+console.log(superHeroes.squadName);
+console.log(superHeroes.members[1].name);
+console.log(superHeroes.members[1].powers[2]);
+console.log(superHeroes.members[1].age);
+function backgroundColor(){
+    
+    let h1= document.querySelector("h1")
+    
+    if(h1.style.backgroundColor==="yellow"){
+        h1.style.backgroundColor="";
+    }
+    else{
+        h1.style.backgroundColor="yellow"
+    }
+}
+function mostrarImagen(){
+    let img = document.querySelector("img")
+    if(img.style.display==="none"){
+        img.style.display = "block";
+    }
+    else{
+        img.style.display = "none";
+    }
+}
