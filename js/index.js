@@ -23,6 +23,7 @@
 //    let resultado=num1+num2;
 //    console.log(resultado);
 
+
 //let largoPelo=prompt("¿Tiene el pelo largo?");
 
 //let edad= prompt("Ingrese edad");
@@ -181,46 +182,46 @@
 //let resultadoDado = tirarDatos(dado);
 //console.log(resultadoDado);
 
-let toDoList = {
-    tipoDeTarea: "Compras",
-    dia: "06/03/2026",
-    productos: ["jabon","aceite","arroz","shampoo"],
-    cantidadDeProductos: 4,
-    estado: "pendiente",
-    notificacion: function(){
-        alert("¡Esta tarea tiene una prioridad urgente!");
-    }
-}
-console.log(toDoList.dia);
-console.log(toDoList["tipoDeTarea"]);
-console.log(toDoList["cantidadDeProductos"]);
-toDoList.notificacion();
+//let toDoList = {
+//    tipoDeTarea: "Compras",
+//    dia: "06/03/2026",
+//    productos: ["jabon","aceite","arroz","shampoo"],
+//    cantidadDeProductos: 4,
+//    estado: "pendiente",
+//    notificacion: function(){
+//        alert("¡Esta tarea tiene una prioridad urgente!");
+//    }
+//}
+//console.log(toDoList.dia);
+//console.log(toDoList["tipoDeTarea"]);
+//console.log(toDoList["cantidadDeProductos"]);
+//toDoList.notificacion();
 
-const superHeroes ={
-    "squadName" : "Super Hero Squad",
-    "homeTown" : "Metro City",
-    "formed" : 2016,
-    "secretBase" : "Super tower",
-    "active" : true,
-    "members" : [
-        {
-        "name" : "Molecule Man",
-        "age" : 29,
-        "secretIdentity" : "Dan Jukes",
-        "powers" : ["Radiation resistance","Turning tiny","Radiation blast"]
-        },
-        {
-        "name" : "Madame Uppercut",
-        "age" : 39,
-        "secretIdentity" : "Jane Wilson",
-        "powers" : ["Million tonne punch","Damage resistance","Superhuman reflexes"]
-        }
-    ]
-}
-console.log(superHeroes.squadName);
-console.log(superHeroes.members[1].name);
-console.log(superHeroes.members[1].powers[2]);
-console.log(superHeroes.members[1].age);
+//const superHeroes ={
+//    "squadName" : "Super Hero Squad",
+//    "homeTown" : "Metro City",
+//    "formed" : 2016,
+//    "secretBase" : "Super tower",
+//    "active" : true,
+//    "members" : [
+//        {
+//        "name" : "Molecule Man",
+//        "age" : 29,
+//        "secretIdentity" : "Dan Jukes",
+//        "powers" : ["Radiation resistance","Turning tiny","Radiation blast"]
+//        },
+//        {
+//        "name" : "Madame Uppercut",
+//        "age" : 39,
+//        "secretIdentity" : "Jane Wilson",
+//        "powers" : ["Million tonne punch","Damage resistance","Superhuman reflexes"]
+//        }
+//    ]
+//}
+//console.log(superHeroes.squadName);
+//console.log(superHeroes.members[1].name);
+//console.log(superHeroes.members[1].powers[2]);
+//console.log(superHeroes.members[1].age);
 function backgroundColor(){
     
     let h1= document.querySelector("h1")
@@ -241,3 +242,58 @@ function mostrarImagen(){
         img.style.display = "none";
     }
 }
+class Animal{
+    nombre= String;
+    edad= Number;
+    peso= Number;
+    constructor(nombre,edad,peso){
+        this.nombre= nombre;
+        this.edad= edad;
+        this.peso= peso;
+    }
+}
+let pato= new Animal ("Licenciaciado Picoso",2,15);
+console.log(pato);
+
+class Ciudadano{
+    nombre= String;
+    apellido= String;
+    DNI= Number;
+    mostrar(){
+        console.log(`El ciudadano ${this.nombre} ${this.apellido}, tiene el siguiente número numero de dni: ${this.DNI}`);
+    }
+    constructor(nombre, apellido,DNI){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.DNI = DNI;
+    }
+}
+
+persona1=new Ciudadano("Paz","Perez",44555666);
+persona2=new Ciudadano("Raul","Rodriguez",33888222);
+persona3=new Ciudadano("Jamie","Jara",77888999);
+
+persona1.mostrar();
+persona2.mostrar();
+persona3.mostrar();
+
+class AltaBajaCiudadano extends Ciudadano{
+    activo= String;
+    mostrarEstado(){
+        console.log(`${this.activo}`);
+        //this.activo=prompt("Se encuentra activo SI/NO")
+    }
+    constructor(nombre, apellido,DNI,activo){
+        super(nombre, apellido,DNI,activo);
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.DNI = DNI;
+        this.activo= activo;
+    }
+}
+ciudadano1 = new Ciudadano("Persona","Uno",1);
+ciudadano1 = new AltaBajaCiudadano("SI");
+ciudadano2 = new AltaBajaCiudadano("Persona","Dos",2,"NO");
+
+ciudadano1.mostrar();
+ciudadano1.mostrarEstado();
